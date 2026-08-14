@@ -1,0 +1,83 @@
+{
+  "format_version": 1,
+  "n_actions": 6,
+  "n_neighbors": 50,
+  "temperature": 0.5,
+  "bandwidth_mode": "adaptive_local",
+  "adaptive_scale_neighbor_rank": 20,
+  "actions": {
+    "0": {
+      "n_rows": 21868,
+      "dim": 256,
+      "embeddings": "embeddings_A0.f32",
+      "outcomes": "outcomes_A0.f32",
+      "groups": "groups_A0.i32",
+      "sha256": {
+        "embeddings_A0.f32": "16455cada533372c2566fe325641f0e3d2e5595515950d6a54f9605fd9b0fe02",
+        "outcomes_A0.f32": "b60fc7326cc21d64fd9463cc9a038d5a4f939332cdf2247ed9df7123a200fa71",
+        "groups_A0.i32": "960f15af36e632d4153adc4c6e04d8488586129873fdde7b46a823a24b2b8c0d"
+      }
+    },
+    "1": {
+      "n_rows": 1371,
+      "dim": 256,
+      "embeddings": "embeddings_A1.f32",
+      "outcomes": "outcomes_A1.f32",
+      "groups": "groups_A1.i32",
+      "sha256": {
+        "embeddings_A1.f32": "068af604222b6262d57f75f5af34b09d40f17bc83b3837f15fa1be58c6956db2",
+        "outcomes_A1.f32": "00fd4d083e2d66d56e768f2108128c6852274d4db9a0508771a9fc253e0bf7ba",
+        "groups_A1.i32": "7129cae3f84062ad99a4118bb7dd5d473de8120cf54cecd1b7ea8ed681b763dc"
+      }
+    },
+    "2": {
+      "n_rows": 322,
+      "dim": 256,
+      "embeddings": "embeddings_A2.f32",
+      "outcomes": "outcomes_A2.f32",
+      "groups": "groups_A2.i32",
+      "sha256": {
+        "embeddings_A2.f32": "9708900a3b13ed82eb77c171a0c3e57a0b845c69afae239cfa8d74c7a0a4f762",
+        "outcomes_A2.f32": "ed67d154a4a9f46df4396616d31054940b37e5f1c5942a8b4c49c97366438dbf",
+        "groups_A2.i32": "bc27fd8f1f6a9b57dc714d2933d3b0f34e3f96a47bfa796b0580f4f358c875ac"
+      }
+    },
+    "3": {
+      "n_rows": 456,
+      "dim": 256,
+      "embeddings": "embeddings_A3.f32",
+      "outcomes": "outcomes_A3.f32",
+      "groups": "groups_A3.i32",
+      "sha256": {
+        "embeddings_A3.f32": "b16742da6a459f54317c617d3ebbe7355780493746321a5969cfd79f888547e6",
+        "outcomes_A3.f32": "e5597ec4afb1534c0cc1a78e2b20a9ef4da474a8ccf1d539c366488fd07170f7",
+        "groups_A3.i32": "9f9045930210a082c4539691c57d88b21e5e58aaafd0c1d198cfd1daa3c32bcd"
+      }
+    },
+    "4": {
+      "n_rows": 699,
+      "dim": 256,
+      "embeddings": "embeddings_A4.f32",
+      "outcomes": "outcomes_A4.f32",
+      "groups": "groups_A4.i32",
+      "sha256": {
+        "embeddings_A4.f32": "288c9927b0a7942ddeb471dc5b825c85111fc26cebe94a8081311f5220cf17a5",
+        "outcomes_A4.f32": "3c410f3542d342e8cd1daea65c666560fc96a39a8c393b04f340066b6f1be4b7",
+        "groups_A4.i32": "20fb790dec9a947bc85a96f24d8f8253c8c437067700d08dccb10dd5db984320"
+      }
+    },
+    "5": {
+      "n_rows": 1784,
+      "dim": 256,
+      "embeddings": "embeddings_A5.f32",
+      "outcomes": "outcomes_A5.f32",
+      "groups": "groups_A5.i32",
+      "sha256": {
+        "embeddings_A5.f32": "587463c753a064906829a73bb26885fff2572595cd4b27c59b8ecef18a9dbee9",
+        "outcomes_A5.f32": "a724a74347349217796ec1b0ff8edd4d5d990c1ff497cdced452c293c300bda7",
+        "groups_A5.i32": "912a6f88ea6f6976f0f164f3f32576180b7ba0b0f6a44af4a535174e246f344b"
+      }
+    }
+  },
+  "identifier_policy": "original patient identifiers removed; sequential within-runtime group ids retain donor-patient deduplication only"
+}
