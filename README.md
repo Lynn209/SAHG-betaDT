@@ -1,6 +1,6 @@
-# SAHG-βDT V17 — GitHub Pages browser-only runtime
+# SAHG-βDT
 
-This directory is the generated static deployment. It requires **no Python/FastAPI/server at runtime**.
+This directory is the generated static deployment.
 
 ## Publish
 Upload all files in this directory to a GitHub repository root, then enable **Settings → Pages → Deploy from a branch → main → /(root)**.
