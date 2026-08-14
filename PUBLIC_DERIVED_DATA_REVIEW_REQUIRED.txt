@@ -1,0 +1,9 @@
+SAHG-betaDT V17 browser-only runtime
+
+This static deployment contains donor-derived latent embeddings and outcome values with original patient identifiers removed and replaced by opaque grouping integers.
+
+Because these assets are derived from credentialed source data, de-identification does not by itself establish that public redistribution is permitted.
+
+Before publishing this directory in a PUBLIC GitHub repository, confirm current PhysioNet/MIMIC-IV data-use terms and your institutional governance requirements.
+
+If public redistribution is not permitted, do not publish runtime/donor/. Use the private-backend deployment instead.
