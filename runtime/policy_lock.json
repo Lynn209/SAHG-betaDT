@@ -1,0 +1,43 @@
+{
+  "stage": "08_locked_internal_external_validation",
+  "script_version": "PRIMARY6_LOCKED_VALIDATION_V2_2026_08_07",
+  "selected_candidate_id": "coverage_p050",
+  "policy_family": "coverage",
+  "score_limit": 0.05,
+  "policy_mode": "penalized_risk_difference",
+  "hard_minimum_donor_ess": 10.0,
+  "hard_propensity_floor": 0.001,
+  "preferred_donor_ess": 20.0,
+  "calibration_radius_cap": 0.1,
+  "temporal_smoothing": true,
+  "recent_escalation_lookback_hours": 24,
+  "confidence_level": 0.95,
+  "noninferiority_margin": 0.05,
+  "action_labels": {
+    "0": "continue_current_regimen",
+    "1": "remove_companion_coverage",
+    "2": "beta_lactam_deescalation",
+    "3": "discontinue_beta_lactam",
+    "4": "discontinue_all_antibiotics",
+    "5": "escalation_or_other"
+  },
+  "reference_policy": "shared_A5_rescue_else_A0",
+  "threshold_adaptation_allowed": false,
+  "external_model_retraining": false,
+  "validation_status": "locked_internal_pass_external_heterogeneity_present",
+  "frozen_sha256": {
+    "stage07c_policy_source": "aa16d37225927edc48347ea1c1beca34007b2ab282bbd7536b290aa557a49d9c",
+    "stage07d_selection": "192ff2866f2b3f5e6697af6a7995ba58580d3894c343431fe68e29a1632d23e6",
+    "gate_calibration": "4d6a20224850cda093576c4421dabe131cf8ee0ddeebbc7d3385270252ad34da",
+    "donor_bank_source": "0eb1638c43003ec5e2a0922732efb0065132363d7d66f07506fc491d5450a579",
+    "OOD_reference_source": "57978ce1d1f4b0c415ac3038389c2b3b3b67cec70a276976a66587ca5a616daa",
+    "pretrained_encoder_source": "e0e977230969e6e8c7006460e18f0e212fe4d5ab7c37b8d5da5ca81adae9d00a",
+    "final_ensemble_source": {
+      "final_dr_ensemble_0.pt": "9607a44e43112ce3fe819ac5c685c6a5c99986fd29fbf3ff2d0f2c84d1e4f86b",
+      "final_dr_ensemble_1.pt": "5c056351cd632bec646bbe7f9748a720c6e68806d9f0edbb1e01e714d7fd5b36",
+      "final_dr_ensemble_2.pt": "52613b2f3b6911365416105f11c3936ace594f745a8306dc0c714e2ef9f8e42b",
+      "final_dr_ensemble_3.pt": "20efc236d8a2e58e114b9b99e155b8f06108da95da14b292944e8e7b9329e4ad",
+      "final_dr_ensemble_4.pt": "1691d2089d32672fbc9598fec185c64f585d9ffe72db134faeb79acc765be845"
+    }
+  }
+}

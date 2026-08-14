@@ -1,0 +1,32 @@
+{
+  "stage": "06",
+  "script_version": "SAHG_betaDT_06_V3_NESTED_CAUSAL_ADAPTIVE_DONOR_20260807",
+  "status": "frozen",
+  "development_database": "MIMIC-IV",
+  "development_only_selection": true,
+  "bandwidth_mode": "adaptive_local",
+  "selected_candidate_id": "K50_tau0p5",
+  "selected_tau": 0.5,
+  "selected_n_neighbors": 50,
+  "adaptive_scale_neighbor_rank": 20,
+  "minimum_effective_sample_size": 10.0,
+  "preferred_effective_sample_size": 20.0,
+  "minimum_ess_pass_rate": 0.8,
+  "minimum_valid_donor_rate": 0.99,
+  "selection_detail": {
+    "minimum_cv_risk_candidate": "K50_tau0p75",
+    "minimum_cv_risk": 0.08371905188520176,
+    "minimum_cv_risk_se": 0.003224909832928322,
+    "one_se_threshold": 0.08694396171813008,
+    "n_support_feasible_candidates": 20,
+    "n_one_se_candidates": 19,
+    "selection_rule": "Among candidates satisfying prespecified action-wise donor-support gates, retain candidates with cross-validated action-macro DR proxy risk within one standard error of the minimum; select the candidate with the smallest worst-action P95 weighted latent distance, then lower tau, then fewer donors."
+  },
+  "bootstrap": {
+    "bootstrap_replicates": 500,
+    "replicates_without_feasible_candidate": 0,
+    "feasible_replicate_rate": 1.0,
+    "one_se_width_frozen_from_full_cv": 0.003224909832928322
+  },
+  "config_synchronized": true
+}

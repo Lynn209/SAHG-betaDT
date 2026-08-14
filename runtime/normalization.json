@@ -1,0 +1,728 @@
+{
+  "event": {
+    "heart_rate": {
+      "median": 87.0,
+      "iqr": 26.0,
+      "lower": 47.0,
+      "upper": 143.0,
+      "n": 1010093,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "systolic_bp": {
+      "median": 115.0,
+      "iqr": 29.0,
+      "lower": 74.0,
+      "upper": 182.0,
+      "n": 934458,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "diastolic_bp": {
+      "median": 60.0,
+      "iqr": 18.0,
+      "lower": 33.0,
+      "upper": 111.0,
+      "n": 934336,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "map": {
+      "median": 76.0,
+      "iqr": 19.0,
+      "lower": 46.0,
+      "upper": 127.0,
+      "n": 982296,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "respiratory_rate": {
+      "median": 20.0,
+      "iqr": 9.0,
+      "lower": 6.0,
+      "upper": 40.0,
+      "n": 1007129,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "spo2": {
+      "median": 97.0,
+      "iqr": 5.0,
+      "lower": 83.0,
+      "upper": 100.0,
+      "n": 997197,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "temperature": {
+      "median": 36.94444274902344,
+      "iqr": 0.7777786254882812,
+      "lower": 34.77777862548828,
+      "upper": 39.44444274902344,
+      "n": 313386,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "fio2": {
+      "median": 45.0,
+      "iqr": 10.0,
+      "lower": 25.0,
+      "upper": 100.0,
+      "n": 192651,
+      "sample_n": 192651,
+      "binary": false
+    },
+    "po2": {
+      "median": 94.0,
+      "iqr": 52.0,
+      "lower": 40.0,
+      "upper": 400.0,
+      "n": 80560,
+      "sample_n": 80560,
+      "binary": false
+    },
+    "safi": {
+      "median": 452.3809509277344,
+      "iqr": 47.619049072265625,
+      "lower": 90.5258098602295,
+      "upper": 476.19049072265625,
+      "n": 999393,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "pafi": {
+      "median": 342.8571472167969,
+      "iqr": 290.4761962890625,
+      "lower": 53.0,
+      "upper": 1671.4285888671875,
+      "n": 80560,
+      "sample_n": 80560,
+      "binary": false
+    },
+    "lactate": {
+      "median": 1.899999976158142,
+      "iqr": 1.7999999523162842,
+      "lower": 0.6000000238418579,
+      "upper": 16.799999237060547,
+      "n": 60275,
+      "sample_n": 60275,
+      "binary": false
+    },
+    "creatinine": {
+      "median": 1.100000023841858,
+      "iqr": 1.199999988079071,
+      "lower": 0.30000001192092896,
+      "upper": 9.0,
+      "n": 116619,
+      "sample_n": 116619,
+      "binary": false
+    },
+    "bun": {
+      "median": 25.0,
+      "iqr": 28.375,
+      "lower": 3.0,
+      "upper": 138.0,
+      "n": 116246,
+      "sample_n": 116246,
+      "binary": false
+    },
+    "sodium": {
+      "median": 139.0,
+      "iqr": 6.0,
+      "lower": 123.0,
+      "upper": 157.0,
+      "n": 121219,
+      "sample_n": 121219,
+      "binary": false
+    },
+    "potassium": {
+      "median": 4.0,
+      "iqr": 0.7000000476837158,
+      "lower": 2.799999952316284,
+      "upper": 6.599999904632568,
+      "n": 121470,
+      "sample_n": 121470,
+      "binary": false
+    },
+    "chloride": {
+      "median": 103.0,
+      "iqr": 8.0,
+      "lower": 86.0,
+      "upper": 123.0,
+      "n": 119868,
+      "sample_n": 119868,
+      "binary": false
+    },
+    "bicarbonate": {
+      "median": 24.0,
+      "iqr": 7.0,
+      "lower": 10.0,
+      "upper": 40.0,
+      "n": 117944,
+      "sample_n": 117944,
+      "binary": false
+    },
+    "glucose": {
+      "median": 128.0,
+      "iqr": 62.0,
+      "lower": 55.0,
+      "upper": 427.0,
+      "n": 128116,
+      "sample_n": 128116,
+      "binary": false
+    },
+    "calcium": {
+      "median": 8.300000190734863,
+      "iqr": 1.0,
+      "lower": 6.099999904632568,
+      "upper": 11.100000381469727,
+      "n": 109883,
+      "sample_n": 109883,
+      "binary": false
+    },
+    "ionized_calcium": {
+      "median": 1.100000023841858,
+      "iqr": 0.12000000476837158,
+      "lower": 0.7799999713897705,
+      "upper": 1.5,
+      "n": 41593,
+      "sample_n": 41593,
+      "binary": false
+    },
+    "hemoglobin": {
+      "median": 9.199999809265137,
+      "iqr": 2.5,
+      "lower": 6.0,
+      "upper": 15.5,
+      "n": 103551,
+      "sample_n": 103551,
+      "binary": false
+    },
+    "hematocrit": {
+      "median": 28.100000381469727,
+      "iqr": 7.200000762939453,
+      "lower": 18.399999618530273,
+      "upper": 47.5,
+      "n": 107993,
+      "sample_n": 107993,
+      "binary": false
+    },
+    "platelet": {
+      "median": 175.0,
+      "iqr": 183.0,
+      "lower": 10.0,
+      "upper": 808.0,
+      "n": 104823,
+      "sample_n": 104823,
+      "binary": false
+    },
+    "wbc": {
+      "median": 11.199999809265137,
+      "iqr": 8.699999332427979,
+      "lower": 0.20000000298023224,
+      "upper": 59.5,
+      "n": 102860,
+      "sample_n": 102860,
+      "binary": false
+    },
+    "neutrophil_pct": {
+      "median": 80.0,
+      "iqr": 18.0,
+      "lower": 0.0,
+      "upper": 97.0,
+      "n": 18297,
+      "sample_n": 18297,
+      "binary": false
+    },
+    "lymphocyte_pct": {
+      "median": 9.0,
+      "iqr": 10.5,
+      "lower": 0.0,
+      "upper": 98.0,
+      "n": 18297,
+      "sample_n": 18297,
+      "binary": false
+    },
+    "albumin": {
+      "median": 2.799999952316284,
+      "iqr": 0.7999999523162842,
+      "lower": 1.399999976158142,
+      "upper": 4.5,
+      "n": 20893,
+      "sample_n": 20893,
+      "binary": false
+    },
+    "bilirubin": {
+      "median": 1.100000023841858,
+      "iqr": 2.799999952316284,
+      "lower": 0.20000000298023224,
+      "upper": 38.24400009155297,
+      "n": 44113,
+      "sample_n": 44113,
+      "binary": false
+    },
+    "crp": {
+      "median": 95.0999984741211,
+      "iqr": 134.59999465942383,
+      "lower": 0.800000011920929,
+      "upper": 293.9519970703125,
+      "n": 1649,
+      "sample_n": 1649,
+      "binary": false
+    },
+    "inr_pt": {
+      "median": 1.399999976158142,
+      "iqr": 0.5999999046325684,
+      "lower": 0.8999999761581421,
+      "upper": 6.400000095367432,
+      "n": 64087,
+      "sample_n": 64087,
+      "binary": false
+    },
+    "pt": {
+      "median": 15.100000381469727,
+      "iqr": 6.19999885559082,
+      "lower": 10.199999809265137,
+      "upper": 67.9000015258789,
+      "n": 64106,
+      "sample_n": 64106,
+      "binary": false
+    },
+    "ptt": {
+      "median": 36.5,
+      "iqr": 27.30000114440918,
+      "lower": 21.5,
+      "upper": 150.0,
+      "n": 70210,
+      "sample_n": 70210,
+      "binary": false
+    },
+    "sofa": {
+      "median": 3.0,
+      "iqr": 5.0,
+      "lower": 0.0,
+      "upper": 17.0,
+      "n": 1839185,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "sirs": {
+      "median": 2.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 4.0,
+      "n": 1053693,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "news": {
+      "median": 5.0,
+      "iqr": 3.0,
+      "lower": 0.0,
+      "upper": 12.0,
+      "n": 1028422,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "news_partial": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": -Infinity,
+      "upper": Infinity,
+      "n": 0,
+      "sample_n": 0
+    },
+    "gcs": {
+      "median": 8.0,
+      "iqr": 2.0,
+      "lower": 2.0,
+      "upper": 10.0,
+      "n": 246379,
+      "sample_n": 246379,
+      "binary": false
+    },
+    "urine": {
+      "median": 90.0,
+      "iqr": 135.0,
+      "lower": 0.0,
+      "upper": 950.0,
+      "n": 564656,
+      "sample_n": 250000,
+      "binary": false
+    },
+    "invasive_ventilation": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 460675,
+      "sample_n": 250000,
+      "binary": true
+    },
+    "hfnc": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 8127,
+      "sample_n": 8127,
+      "binary": true
+    },
+    "niv": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 4279,
+      "sample_n": 4279,
+      "binary": true
+    },
+    "tracheostomy": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 8189,
+      "sample_n": 8189,
+      "binary": true
+    },
+    "rrt_present": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 87823,
+      "sample_n": 87823,
+      "binary": true
+    },
+    "rrt_active": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 76438,
+      "sample_n": 76438,
+      "binary": true
+    },
+    "ecmo_any": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 4912,
+      "sample_n": 4912,
+      "binary": true
+    },
+    "vaso_ind": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 36651,
+      "sample_n": 36651,
+      "binary": true
+    },
+    "norepi_equiv": {
+      "median": 0.09047014266252518,
+      "iqr": 0.10066910833120346,
+      "lower": 0.010001233406364917,
+      "upper": 0.5009175807237625,
+      "n": 244971,
+      "sample_n": 244971,
+      "binary": false
+    },
+    "norepi_rate": {
+      "median": 0.09796526283025742,
+      "iqr": 0.14137963578104973,
+      "lower": 0.010001288782805205,
+      "upper": 0.5563928711414352,
+      "n": 198325,
+      "sample_n": 198325,
+      "binary": false
+    },
+    "epi_rate": {
+      "median": 0.05006393417716026,
+      "iqr": 0.08240949548780918,
+      "lower": 0.009994031861424446,
+      "upper": 1.0204260277748107,
+      "n": 7549,
+      "sample_n": 7549,
+      "binary": false
+    },
+    "dopa_rate": {
+      "median": 5.005945205688477,
+      "iqr": 6.9699907302856445,
+      "lower": 1.0000164473056794,
+      "upper": 20.709175167083725,
+      "n": 7547,
+      "sample_n": 7547,
+      "binary": false
+    },
+    "dobu_rate": {
+      "median": 3.9967331886291504,
+      "iqr": 2.5246012210845947,
+      "lower": 0.5000085830688477,
+      "upper": 15.454548835754395,
+      "n": 8477,
+      "sample_n": 8477,
+      "binary": false
+    },
+    "vasopressin_rate": {
+      "median": 0.03999999910593033,
+      "iqr": 0.009963258169591427,
+      "lower": 0.010027660056948662,
+      "upper": 0.06353240460157394,
+      "n": 71155,
+      "sample_n": 71155,
+      "binary": false
+    },
+    "sedation_ind": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 106878,
+      "sample_n": 106878,
+      "binary": true
+    },
+    "treatment_active_antibacterial_count": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 10.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": false
+    },
+    "treatment_active_beta_lactam_count": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 5.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": false
+    },
+    "treatment_anti_mrsa": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": true
+    },
+    "treatment_beta_asi": {
+      "median": 0.0,
+      "iqr": 5.0,
+      "lower": 0.0,
+      "upper": 15.0,
+      "n": 67877,
+      "sample_n": 67877,
+      "binary": false
+    },
+    "treatment_carbapenem": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": true
+    },
+    "treatment_anaerobic_addon": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": true
+    },
+    "treatment_atypical_coverage": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": true
+    },
+    "treatment_aminoglycoside": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": true
+    },
+    "treatment_fluoroquinolone": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": true
+    },
+    "treatment_polymyxin": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": true
+    },
+    "treatment_antifungal": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": true
+    },
+    "treatment_antiviral": {
+      "median": 0.0,
+      "iqr": 1.0,
+      "lower": 0.0,
+      "upper": 1.0,
+      "n": 67937,
+      "sample_n": 67937,
+      "binary": true
+    }
+  },
+  "static": {
+    "age": {
+      "median": 65.0,
+      "iqr": 22.0
+    },
+    "weight_kg": {
+      "median": 0.0,
+      "iqr": 1.0
+    },
+    "decision_hour_after_t0": {
+      "median": 48.0,
+      "iqr": 72.0
+    },
+    "current_beta_asi": {
+      "median": 7.0,
+      "iqr": 1.0
+    },
+    "current_antibacterial_count": {
+      "median": 2.0,
+      "iqr": 2.0
+    },
+    "current_beta_lactam_count": {
+      "median": 1.0,
+      "iqr": 1e-06
+    },
+    "current_anti_mrsa": {
+      "median": 1.0,
+      "iqr": 1.0
+    }
+  },
+  "trajectory": {
+    "trajectory_sofa_delta72h": {
+      "median": -2.0,
+      "iqr": 4.0
+    },
+    "trajectory_lactate_delta72h": {
+      "median": -0.19999999999999996,
+      "iqr": 0.9999999999999998
+    },
+    "trajectory_norepi_equiv_delta72h": {
+      "median": -0.020005315309390398,
+      "iqr": 0.068161563673736
+    },
+    "trajectory_creatinine_delta72h": {
+      "median": -0.09999999999999998,
+      "iqr": 0.40000000000000013
+    }
+  },
+  "variable_order": [
+    "heart_rate",
+    "systolic_bp",
+    "diastolic_bp",
+    "map",
+    "respiratory_rate",
+    "spo2",
+    "temperature",
+    "fio2",
+    "po2",
+    "safi",
+    "pafi",
+    "lactate",
+    "creatinine",
+    "bun",
+    "sodium",
+    "potassium",
+    "chloride",
+    "bicarbonate",
+    "glucose",
+    "calcium",
+    "ionized_calcium",
+    "hemoglobin",
+    "hematocrit",
+    "platelet",
+    "wbc",
+    "neutrophil_pct",
+    "lymphocyte_pct",
+    "albumin",
+    "bilirubin",
+    "crp",
+    "inr_pt",
+    "pt",
+    "ptt",
+    "sofa",
+    "sirs",
+    "news",
+    "news_partial",
+    "gcs",
+    "urine",
+    "invasive_ventilation",
+    "hfnc",
+    "niv",
+    "tracheostomy",
+    "rrt_present",
+    "rrt_active",
+    "ecmo_any",
+    "vaso_ind",
+    "norepi_equiv",
+    "norepi_rate",
+    "epi_rate",
+    "dopa_rate",
+    "dobu_rate",
+    "vasopressin_rate",
+    "sedation_ind",
+    "treatment_active_antibacterial_count",
+    "treatment_active_beta_lactam_count",
+    "treatment_anti_mrsa",
+    "treatment_beta_asi",
+    "treatment_carbapenem",
+    "treatment_anaerobic_addon",
+    "treatment_atypical_coverage",
+    "treatment_aminoglycoside",
+    "treatment_fluoroquinolone",
+    "treatment_polymyxin",
+    "treatment_antifungal",
+    "treatment_antiviral"
+  ],
+  "static_columns": [
+    "age",
+    "weight_kg",
+    "decision_hour_after_t0",
+    "current_beta_asi",
+    "current_antibacterial_count",
+    "current_beta_lactam_count",
+    "current_anti_mrsa"
+  ],
+  "trajectory_columns": [
+    "trajectory_sofa_delta72h",
+    "trajectory_lactate_delta72h",
+    "trajectory_norepi_equiv_delta72h",
+    "trajectory_creatinine_delta72h"
+  ]
+}
