@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "preflattened_backbone_vs_original_max_abs": 7.152557373046875e-07,
+  "anchor_onnx_vs_original_max_abs": 8.344650268554688e-07,
+  "models": [
+    {
+      "model": 0,
+      "wrapper_max_abs": {
+        "propensity_logits": 5.960464477539062e-07,
+        "factual_binary_logits": 3.5762786865234375e-06,
+        "targeted_binary_logits": 7.033348083496094e-06
+      },
+      "onnx_max_abs": {
+        "propensity_logits": 1.1920928955078125e-06,
+        "factual_binary_logits": 2.384185791015625e-06,
+        "targeted_binary_logits": 1.9073486328125e-06
+      }
+    },
+    {
+      "model": 1,
+      "wrapper_max_abs": {
+        "propensity_logits": 3.5762786865234375e-07,
+        "factual_binary_logits": 3.5762786865234375e-07,
+        "targeted_binary_logits": 1.1920928955078125e-07
+      },
+      "onnx_max_abs": {
+        "propensity_logits": 1.5497207641601562e-06,
+        "factual_binary_logits": 2.384185791015625e-06,
+        "targeted_binary_logits": 4.76837158203125e-07
+      }
+    },
+    {
+      "model": 2,
+      "wrapper_max_abs": {
+        "propensity_logits": 4.76837158203125e-07,
+        "factual_binary_logits": 3.5762786865234375e-07,
+        "targeted_binary_logits": 4.76837158203125e-07
+      },
+      "onnx_max_abs": {
+        "propensity_logits": 1.1920928955078125e-06,
+        "factual_binary_logits": 1.430511474609375e-06,
+        "targeted_binary_logits": 1.0728836059570312e-06
+      }
+    },
+    {
+      "model": 3,
+      "wrapper_max_abs": {
+        "propensity_logits": 4.76837158203125e-07,
+        "factual_binary_logits": 7.152557373046875e-07,
+        "targeted_binary_logits": 1.430511474609375e-06
+      },
+      "onnx_max_abs": {
+        "propensity_logits": 1.6689300537109375e-06,
+        "factual_binary_logits": 2.1457672119140625e-06,
+        "targeted_binary_logits": 1.9073486328125e-06
+      }
+    },
+    {
+      "model": 4,
+      "wrapper_max_abs": {
+        "propensity_logits": 4.76837158203125e-07,
+        "factual_binary_logits": 2.384185791015625e-07,
+        "targeted_binary_logits": 9.5367431640625e-07
+      },
+      "onnx_max_abs": {
+        "propensity_logits": 1.9073486328125e-06,
+        "factual_binary_logits": 1.430511474609375e-06,
+        "targeted_binary_logits": 4.76837158203125e-07
+      }
+    }
+  ],
+  "overall_model_max_abs": 7.033348083496094e-06,
+  "donor_binary_vs_source_max_abs": 1.1331355146637634e-05,
+  "donor_source_direct_query_error": null,
+  "ood_distance_source": 325.60609876748094,
+  "ood_distance_exported_math": 325.60609876748435,
+  "ood_abs_diff": 3.410605131648481e-12,
+  "hard_model_tolerance": 0.0005,
+  "notes": [
+    "The browser page performs an additional end-to-end self-test using browser preprocessing + ONNX Runtime Web + JS donor logic.",
+    "A direct DonorBank.query compatibility failure does not silently pass donor semantics; browser self-test still validates exported arrays and runtime calculations, and the source version should be reviewed if this field is non-null."
+  ]
+}
