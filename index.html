@@ -65,6 +65,23 @@
     .disclaimer-bar{background:#fff;border-top:1px solid var(--line);padding:16px 0}
     .disclaimer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:11px;color:#75808d}
     .disclaimer-inner b{color:#566273}
+
+    /* v2 UI fixes */
+    .quick-step .quick-num{
+      display:grid;
+      place-items:center;
+      width:30px;
+      height:30px;
+      padding:0;
+      line-height:1;
+      text-align:center;
+      box-sizing:border-box;
+    }
+    /* Preserve the lowercase Greek beta instead of uppercasing it to a glyph that resembles Latin B. */
+    .tool-hero .eyebrow{
+      text-transform:none;
+    }
+
     .hidden-contract-stats{display:none!important}
     @media(max-width:980px){.tool-hero-grid{grid-template-columns:1fr}.result-card{position:static}.quick-card{max-width:none}}
     @media(max-width:620px){.tool-hero{padding:38px 0 30px}.tool-hero h1{font-size:37px}.variable-groups{grid-template-columns:1fr}.disclaimer-inner{display:block}.action-help .action-legend{grid-template-columns:1fr}}
@@ -215,28 +232,25 @@
             </div>
           </details>
 
-          <details class="tool-details">
-            <summary>Advanced settings</summary>
-            <div class="details-body advanced-grid">
-              <p>Most users can leave these settings unchanged. They are retained for the frozen runtime contract and sequential assessments.</p>
-              <div class="form-grid">
-                <label>Assessment mode
-                  <select id="mode"><option value="dynamic" selected>Dynamic sequential</option><option value="independent">Independent landmark only</option></select>
-                </label>
-                <label>Data availability preset
-                  <select id="sourceProfile"><option value="miiv" selected>MIMIC-IV preset</option><option value="eicu">eICU preset</option><option value="aumc">AmsterdamUMCdb preset</option><option value="hirid">HiRID preset</option><option value="sic">SICdb preset</option><option value="nwicu">NWICU preset</option></select>
-                </label>
-                <label>Anonymous session code
-                  <input id="patientCode" type="text" value="WEB-001" maxlength="50">
-                  <span class="field-note">used only to keep sequential state in this browser</span>
-                </label>
-              </div>
-              <div class="validation-panel">
-                <div><svg><use href="#i-clock"/></svg><span><b>Sequential state:</b> <span id="pathState">stage=0 · cooldown=0 · pending=0 · last=none</span></span></div>
-              </div>
-              <button class="btn ghost" type="button" id="resetPath">Reset sequential state</button>
-            </div>
-          </details>
+          <!-- Runtime-only frozen defaults.
+               Intentionally hidden from ordinary users; app.js still requires these DOM IDs. -->
+          <div class="hidden-contract-stats" aria-hidden="true">
+            <select id="mode" tabindex="-1">
+              <option value="dynamic" selected>Dynamic sequential</option>
+              <option value="independent">Independent landmark only</option>
+            </select>
+            <select id="sourceProfile" tabindex="-1">
+              <option value="miiv" selected>MIMIC-IV preset</option>
+              <option value="eicu">eICU preset</option>
+              <option value="aumc">AmsterdamUMCdb preset</option>
+              <option value="hirid">HiRID preset</option>
+              <option value="sic">SICdb preset</option>
+              <option value="nwicu">NWICU preset</option>
+            </select>
+            <input id="patientCode" type="text" value="WEB-001" tabindex="-1">
+            <span id="pathState">stage=0 · cooldown=0 · pending=0 · last=none</span>
+            <button id="resetPath" type="button" tabindex="-1">Reset sequential state</button>
+          </div>
 
           <div class="primary-run">
             <button class="run-btn" id="runBtn" type="submit"><svg><use href="#i-brain"/></svg><span>Get SAHG-βDT recommendation</span></button>
