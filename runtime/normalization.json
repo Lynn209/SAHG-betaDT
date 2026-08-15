@@ -327,8 +327,8 @@
     "news_partial": {
       "median": 0.0,
       "iqr": 1.0,
-      "lower": -Infinity,
-      "upper": Infinity,
+      "lower": "-Infinity",
+      "upper": "Infinity",
       "n": 0,
       "sample_n": 0
     },
