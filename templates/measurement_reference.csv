@@ -1,0 +1,67 @@
+﻿measurement,unit_or_encoding
+Heart rate,beats/min
+Systolic blood pressure,mmHg
+Diastolic blood pressure,mmHg
+Mean arterial pressure,mmHg
+Respiratory rate,breaths/min
+Peripheral oxygen saturation (SpO₂),%
+Body temperature,°C
+Fraction of inspired oxygen (FiO₂),%
+Arterial oxygen partial pressure (PaO₂),mmHg
+SpO₂/FiO₂ ratio (S/F ratio),ratio
+PaO₂/FiO₂ ratio (P/F ratio),ratio
+Blood lactate,mmol/L
+Serum creatinine,mg/dL
+Blood urea nitrogen,mg/dL
+Serum sodium,mmol/L
+Serum potassium,mmol/L
+Serum chloride,mmol/L
+Serum bicarbonate,mmol/L
+Blood glucose,mg/dL
+Total serum calcium,mg/dL
+Ionized calcium,mmol/L
+Hemoglobin,g/dL
+Hematocrit,%
+Platelet count,×10⁹/L
+White blood cell count,×10⁹/L
+Neutrophils,%
+Lymphocytes,%
+Serum albumin,g/dL
+Total bilirubin,mg/dL
+C-reactive protein (CRP),mg/L
+International normalized ratio (INR),ratio
+Prothrombin time (PT),s
+Partial thromboplastin time (PTT),s
+Sequential Organ Failure Assessment (SOFA) score,points
+Systemic Inflammatory Response Syndrome (SIRS) score,points
+National Early Warning Score (NEWS),points
+Partial NEWS indicator,0/1
+Glasgow Coma Scale (GCS),points
+Urine output,mL/h
+Invasive mechanical ventilation,0/1
+High-flow nasal cannula (HFNC),0/1
+Non-invasive ventilation (NIV),0/1
+Tracheostomy,0/1
+Renal replacement therapy present,0/1
+Renal replacement therapy active,0/1
+Extracorporeal membrane oxygenation (ECMO),0/1
+Vasopressor use,0/1
+Norepinephrine-equivalent dose,µg/kg/min
+Norepinephrine infusion rate,µg/kg/min
+Epinephrine infusion rate,µg/kg/min
+Dopamine infusion rate,µg/kg/min
+Dobutamine infusion rate,µg/kg/min
+Vasopressin infusion rate,U/min
+Sedation exposure,0/1
+Number of active systemic antibacterials,count
+Number of active β-lactams,count
+Anti-MRSA coverage,0/1
+β-lactam Modified Antibiotic Spectrum Index (ASI),points
+Carbapenem exposure,0/1
+Additional anaerobic coverage,0/1
+Atypical pathogen coverage,0/1
+Aminoglycoside exposure,0/1
+Fluoroquinolone exposure,0/1
+Polymyxin exposure,0/1
+Antifungal exposure,0/1
+Antiviral exposure,0/1

@@ -1,0 +1,373 @@
+﻿time_from_t0_hours,measurement,value,unit_or_encoding
+-24,Heart rate,110,beats/min
+-24,Systolic blood pressure,98,mmHg
+-24,Diastolic blood pressure,56,mmHg
+-24,Mean arterial pressure,67,mmHg
+-24,Respiratory rate,25,breaths/min
+-24,Peripheral oxygen saturation (SpO₂),93,%
+-24,Body temperature,38.8,°C
+-24,Fraction of inspired oxygen (FiO₂),40.0,%
+-24,Arterial oxygen partial pressure (PaO₂),76,mmHg
+-24,SpO₂/FiO₂ ratio (S/F ratio),233,ratio
+-24,PaO₂/FiO₂ ratio (P/F ratio),190,ratio
+-24,Blood lactate,2.8,mmol/L
+-24,Serum creatinine,1.45,mg/dL
+-24,Blood urea nitrogen,31,mg/dL
+-24,Serum sodium,134,mmol/L
+-24,Serum potassium,4.5,mmol/L
+-24,Serum chloride,101,mmol/L
+-24,Serum bicarbonate,20,mmol/L
+-24,Blood glucose,154,mg/dL
+-24,Hemoglobin,11.4,g/dL
+-24,Platelet count,148,×10⁹/L
+-24,White blood cell count,15.8,×10⁹/L
+-24,Neutrophils,86,%
+-24,Lymphocytes,7,%
+-24,Serum albumin,2.8,g/dL
+-24,Total bilirubin,1.2,mg/dL
+-24,C-reactive protein (CRP),165,mg/L
+-24,International normalized ratio (INR),1.25,ratio
+-24,Prothrombin time (PT),14.2,s
+-24,Partial thromboplastin time (PTT),35,s
+-24,Sequential Organ Failure Assessment (SOFA) score,7,points
+-24,Systemic Inflammatory Response Syndrome (SIRS) score,4,points
+-24,National Early Warning Score (NEWS),8,points
+-24,Glasgow Coma Scale (GCS),14,points
+-24,Urine output,35,mL/h
+-24,Invasive mechanical ventilation,0,0/1
+-24,High-flow nasal cannula (HFNC),1,0/1
+-24,Non-invasive ventilation (NIV),0,0/1
+-24,Tracheostomy,0,0/1
+-24,Renal replacement therapy present,0,0/1
+-24,Renal replacement therapy active,0,0/1
+-24,Extracorporeal membrane oxygenation (ECMO),0,0/1
+-24,Vasopressor use,1,0/1
+-24,Norepinephrine-equivalent dose,0.06,µg/kg/min
+-24,Norepinephrine infusion rate,0.06,µg/kg/min
+-24,Epinephrine infusion rate,0,µg/kg/min
+-24,Dopamine infusion rate,0,µg/kg/min
+-24,Dobutamine infusion rate,0,µg/kg/min
+-24,Vasopressin infusion rate,0,U/min
+-24,Sedation exposure,0,0/1
+-24,Number of active systemic antibacterials,1,count
+-24,Number of active β-lactams,1,count
+-24,Anti-MRSA coverage,0,0/1
+-24,β-lactam Modified Antibiotic Spectrum Index (ASI),8,points
+-24,Carbapenem exposure,0,0/1
+-24,Additional anaerobic coverage,0,0/1
+-24,Atypical pathogen coverage,0,0/1
+-24,Aminoglycoside exposure,0,0/1
+-24,Fluoroquinolone exposure,0,0/1
+-24,Polymyxin exposure,0,0/1
+-24,Antifungal exposure,0,0/1
+-24,Antiviral exposure,0,0/1
+0,Heart rate,106,beats/min
+0,Systolic blood pressure,102,mmHg
+0,Diastolic blood pressure,59,mmHg
+0,Mean arterial pressure,70,mmHg
+0,Respiratory rate,24,breaths/min
+0,Peripheral oxygen saturation (SpO₂),94,%
+0,Body temperature,38.5,°C
+0,Fraction of inspired oxygen (FiO₂),38.0,%
+0,Arterial oxygen partial pressure (PaO₂),80,mmHg
+0,SpO₂/FiO₂ ratio (S/F ratio),247,ratio
+0,PaO₂/FiO₂ ratio (P/F ratio),211,ratio
+0,Blood lactate,2.5,mmol/L
+0,Serum creatinine,1.42,mg/dL
+0,Blood urea nitrogen,30,mg/dL
+0,Serum sodium,134,mmol/L
+0,Serum potassium,4.4,mmol/L
+0,Serum chloride,102,mmol/L
+0,Serum bicarbonate,21,mmol/L
+0,Blood glucose,148,mg/dL
+0,Hemoglobin,11.3,g/dL
+0,Platelet count,152,×10⁹/L
+0,White blood cell count,15.2,×10⁹/L
+0,Neutrophils,85,%
+0,Lymphocytes,8,%
+0,Serum albumin,2.8,g/dL
+0,Total bilirubin,1.2,mg/dL
+0,C-reactive protein (CRP),155,mg/L
+0,International normalized ratio (INR),1.24,ratio
+0,Prothrombin time (PT),14.1,s
+0,Partial thromboplastin time (PTT),35,s
+0,Sequential Organ Failure Assessment (SOFA) score,7,points
+0,Systemic Inflammatory Response Syndrome (SIRS) score,4,points
+0,National Early Warning Score (NEWS),8,points
+0,Glasgow Coma Scale (GCS),14,points
+0,Urine output,38,mL/h
+0,Invasive mechanical ventilation,0,0/1
+0,High-flow nasal cannula (HFNC),1,0/1
+0,Non-invasive ventilation (NIV),0,0/1
+0,Tracheostomy,0,0/1
+0,Renal replacement therapy present,0,0/1
+0,Renal replacement therapy active,0,0/1
+0,Extracorporeal membrane oxygenation (ECMO),0,0/1
+0,Vasopressor use,1,0/1
+0,Norepinephrine-equivalent dose,0.05,µg/kg/min
+0,Norepinephrine infusion rate,0.05,µg/kg/min
+0,Epinephrine infusion rate,0,µg/kg/min
+0,Dopamine infusion rate,0,µg/kg/min
+0,Dobutamine infusion rate,0,µg/kg/min
+0,Vasopressin infusion rate,0,U/min
+0,Sedation exposure,0,0/1
+0,Number of active systemic antibacterials,1,count
+0,Number of active β-lactams,1,count
+0,Anti-MRSA coverage,0,0/1
+0,β-lactam Modified Antibiotic Spectrum Index (ASI),8,points
+0,Carbapenem exposure,0,0/1
+0,Additional anaerobic coverage,0,0/1
+0,Atypical pathogen coverage,0,0/1
+0,Aminoglycoside exposure,0,0/1
+0,Fluoroquinolone exposure,0,0/1
+0,Polymyxin exposure,0,0/1
+0,Antifungal exposure,0,0/1
+0,Antiviral exposure,0,0/1
+12,Heart rate,101,beats/min
+12,Systolic blood pressure,106,mmHg
+12,Diastolic blood pressure,62,mmHg
+12,Mean arterial pressure,73,mmHg
+12,Respiratory rate,22,breaths/min
+12,Peripheral oxygen saturation (SpO₂),95,%
+12,Body temperature,38.0,°C
+12,Fraction of inspired oxygen (FiO₂),35.0,%
+12,Arterial oxygen partial pressure (PaO₂),84,mmHg
+12,SpO₂/FiO₂ ratio (S/F ratio),271,ratio
+12,PaO₂/FiO₂ ratio (P/F ratio),240,ratio
+12,Blood lactate,2.1,mmol/L
+12,Serum creatinine,1.35,mg/dL
+12,Blood urea nitrogen,29,mg/dL
+12,Serum sodium,135,mmol/L
+12,Serum potassium,4.3,mmol/L
+12,Serum chloride,103,mmol/L
+12,Serum bicarbonate,22,mmol/L
+12,Blood glucose,142,mg/dL
+12,Hemoglobin,11.2,g/dL
+12,Platelet count,160,×10⁹/L
+12,White blood cell count,14.1,×10⁹/L
+12,Neutrophils,83,%
+12,Lymphocytes,9,%
+12,Serum albumin,2.8,g/dL
+12,Total bilirubin,1.1,mg/dL
+12,C-reactive protein (CRP),140,mg/L
+12,International normalized ratio (INR),1.22,ratio
+12,Prothrombin time (PT),13.9,s
+12,Partial thromboplastin time (PTT),34,s
+12,Sequential Organ Failure Assessment (SOFA) score,6,points
+12,Systemic Inflammatory Response Syndrome (SIRS) score,3,points
+12,National Early Warning Score (NEWS),7,points
+12,Glasgow Coma Scale (GCS),14,points
+12,Urine output,42,mL/h
+12,Invasive mechanical ventilation,0,0/1
+12,High-flow nasal cannula (HFNC),1,0/1
+12,Non-invasive ventilation (NIV),0,0/1
+12,Tracheostomy,0,0/1
+12,Renal replacement therapy present,0,0/1
+12,Renal replacement therapy active,0,0/1
+12,Extracorporeal membrane oxygenation (ECMO),0,0/1
+12,Vasopressor use,1,0/1
+12,Norepinephrine-equivalent dose,0.03,µg/kg/min
+12,Norepinephrine infusion rate,0.03,µg/kg/min
+12,Epinephrine infusion rate,0,µg/kg/min
+12,Dopamine infusion rate,0,µg/kg/min
+12,Dobutamine infusion rate,0,µg/kg/min
+12,Vasopressin infusion rate,0,U/min
+12,Sedation exposure,0,0/1
+12,Number of active systemic antibacterials,1,count
+12,Number of active β-lactams,1,count
+12,Anti-MRSA coverage,0,0/1
+12,β-lactam Modified Antibiotic Spectrum Index (ASI),8,points
+12,Carbapenem exposure,0,0/1
+12,Additional anaerobic coverage,0,0/1
+12,Atypical pathogen coverage,0,0/1
+12,Aminoglycoside exposure,0,0/1
+12,Fluoroquinolone exposure,0,0/1
+12,Polymyxin exposure,0,0/1
+12,Antifungal exposure,0,0/1
+12,Antiviral exposure,0,0/1
+24,Heart rate,95,beats/min
+24,Systolic blood pressure,112,mmHg
+24,Diastolic blood pressure,65,mmHg
+24,Mean arterial pressure,77,mmHg
+24,Respiratory rate,20,breaths/min
+24,Peripheral oxygen saturation (SpO₂),96,%
+24,Body temperature,37.6,°C
+24,Fraction of inspired oxygen (FiO₂),32.0,%
+24,Arterial oxygen partial pressure (PaO₂),88,mmHg
+24,SpO₂/FiO₂ ratio (S/F ratio),300,ratio
+24,PaO₂/FiO₂ ratio (P/F ratio),275,ratio
+24,Blood lactate,1.7,mmol/L
+24,Serum creatinine,1.28,mg/dL
+24,Blood urea nitrogen,27,mg/dL
+24,Serum sodium,136,mmol/L
+24,Serum potassium,4.1,mmol/L
+24,Serum chloride,104,mmol/L
+24,Serum bicarbonate,23,mmol/L
+24,Blood glucose,134,mg/dL
+24,Hemoglobin,11.1,g/dL
+24,Platelet count,170,×10⁹/L
+24,White blood cell count,12.5,×10⁹/L
+24,Neutrophils,80,%
+24,Lymphocytes,11,%
+24,Serum albumin,2.9,g/dL
+24,Total bilirubin,1.0,mg/dL
+24,C-reactive protein (CRP),115,mg/L
+24,International normalized ratio (INR),1.18,ratio
+24,Prothrombin time (PT),13.6,s
+24,Partial thromboplastin time (PTT),33,s
+24,Sequential Organ Failure Assessment (SOFA) score,5,points
+24,Systemic Inflammatory Response Syndrome (SIRS) score,3,points
+24,National Early Warning Score (NEWS),5,points
+24,Glasgow Coma Scale (GCS),15,points
+24,Urine output,48,mL/h
+24,Invasive mechanical ventilation,0,0/1
+24,High-flow nasal cannula (HFNC),1,0/1
+24,Non-invasive ventilation (NIV),0,0/1
+24,Tracheostomy,0,0/1
+24,Renal replacement therapy present,0,0/1
+24,Renal replacement therapy active,0,0/1
+24,Extracorporeal membrane oxygenation (ECMO),0,0/1
+24,Vasopressor use,0,0/1
+24,Norepinephrine-equivalent dose,0.0,µg/kg/min
+24,Norepinephrine infusion rate,0.0,µg/kg/min
+24,Epinephrine infusion rate,0,µg/kg/min
+24,Dopamine infusion rate,0,µg/kg/min
+24,Dobutamine infusion rate,0,µg/kg/min
+24,Vasopressin infusion rate,0,U/min
+24,Sedation exposure,0,0/1
+24,Number of active systemic antibacterials,1,count
+24,Number of active β-lactams,1,count
+24,Anti-MRSA coverage,0,0/1
+24,β-lactam Modified Antibiotic Spectrum Index (ASI),8,points
+24,Carbapenem exposure,0,0/1
+24,Additional anaerobic coverage,0,0/1
+24,Atypical pathogen coverage,0,0/1
+24,Aminoglycoside exposure,0,0/1
+24,Fluoroquinolone exposure,0,0/1
+24,Polymyxin exposure,0,0/1
+24,Antifungal exposure,0,0/1
+24,Antiviral exposure,0,0/1
+36,Heart rate,90,beats/min
+36,Systolic blood pressure,118,mmHg
+36,Diastolic blood pressure,68,mmHg
+36,Mean arterial pressure,82,mmHg
+36,Respiratory rate,18,breaths/min
+36,Peripheral oxygen saturation (SpO₂),97,%
+36,Body temperature,37.3,°C
+36,Fraction of inspired oxygen (FiO₂),30.0,%
+36,Arterial oxygen partial pressure (PaO₂),92,mmHg
+36,SpO₂/FiO₂ ratio (S/F ratio),323,ratio
+36,PaO₂/FiO₂ ratio (P/F ratio),307,ratio
+36,Blood lactate,1.4,mmol/L
+36,Serum creatinine,1.2,mg/dL
+36,Blood urea nitrogen,25,mg/dL
+36,Serum sodium,137,mmol/L
+36,Serum potassium,4.0,mmol/L
+36,Serum chloride,104,mmol/L
+36,Serum bicarbonate,24,mmol/L
+36,Blood glucose,126,mg/dL
+36,Hemoglobin,11.0,g/dL
+36,Platelet count,184,×10⁹/L
+36,White blood cell count,10.9,×10⁹/L
+36,Neutrophils,76,%
+36,Lymphocytes,13,%
+36,Serum albumin,2.9,g/dL
+36,Total bilirubin,0.9,mg/dL
+36,C-reactive protein (CRP),90,mg/L
+36,International normalized ratio (INR),1.14,ratio
+36,Prothrombin time (PT),13.3,s
+36,Partial thromboplastin time (PTT),32,s
+36,Sequential Organ Failure Assessment (SOFA) score,4,points
+36,Systemic Inflammatory Response Syndrome (SIRS) score,2,points
+36,National Early Warning Score (NEWS),4,points
+36,Glasgow Coma Scale (GCS),15,points
+36,Urine output,55,mL/h
+36,Invasive mechanical ventilation,0,0/1
+36,High-flow nasal cannula (HFNC),0,0/1
+36,Non-invasive ventilation (NIV),0,0/1
+36,Tracheostomy,0,0/1
+36,Renal replacement therapy present,0,0/1
+36,Renal replacement therapy active,0,0/1
+36,Extracorporeal membrane oxygenation (ECMO),0,0/1
+36,Vasopressor use,0,0/1
+36,Norepinephrine-equivalent dose,0.0,µg/kg/min
+36,Norepinephrine infusion rate,0.0,µg/kg/min
+36,Epinephrine infusion rate,0,µg/kg/min
+36,Dopamine infusion rate,0,µg/kg/min
+36,Dobutamine infusion rate,0,µg/kg/min
+36,Vasopressin infusion rate,0,U/min
+36,Sedation exposure,0,0/1
+36,Number of active systemic antibacterials,1,count
+36,Number of active β-lactams,1,count
+36,Anti-MRSA coverage,0,0/1
+36,β-lactam Modified Antibiotic Spectrum Index (ASI),8,points
+36,Carbapenem exposure,0,0/1
+36,Additional anaerobic coverage,0,0/1
+36,Atypical pathogen coverage,0,0/1
+36,Aminoglycoside exposure,0,0/1
+36,Fluoroquinolone exposure,0,0/1
+36,Polymyxin exposure,0,0/1
+36,Antifungal exposure,0,0/1
+36,Antiviral exposure,0,0/1
+48,Heart rate,86,beats/min
+48,Systolic blood pressure,122,mmHg
+48,Diastolic blood pressure,70,mmHg
+48,Mean arterial pressure,86,mmHg
+48,Respiratory rate,17,breaths/min
+48,Peripheral oxygen saturation (SpO₂),97,%
+48,Body temperature,37.1,°C
+48,Fraction of inspired oxygen (FiO₂),28.000000000000004,%
+48,Arterial oxygen partial pressure (PaO₂),94,mmHg
+48,SpO₂/FiO₂ ratio (S/F ratio),346,ratio
+48,PaO₂/FiO₂ ratio (P/F ratio),336,ratio
+48,Blood lactate,1.2,mmol/L
+48,Serum creatinine,1.12,mg/dL
+48,Blood urea nitrogen,23,mg/dL
+48,Serum sodium,138,mmol/L
+48,Serum potassium,3.9,mmol/L
+48,Serum chloride,105,mmol/L
+48,Serum bicarbonate,25,mmol/L
+48,Blood glucose,118,mg/dL
+48,Hemoglobin,10.9,g/dL
+48,Platelet count,198,×10⁹/L
+48,White blood cell count,9.8,×10⁹/L
+48,Neutrophils,72,%
+48,Lymphocytes,16,%
+48,Serum albumin,3.0,g/dL
+48,Total bilirubin,0.8,mg/dL
+48,C-reactive protein (CRP),72,mg/L
+48,International normalized ratio (INR),1.1,ratio
+48,Prothrombin time (PT),13.0,s
+48,Partial thromboplastin time (PTT),31,s
+48,Sequential Organ Failure Assessment (SOFA) score,3,points
+48,Systemic Inflammatory Response Syndrome (SIRS) score,1,points
+48,National Early Warning Score (NEWS),2,points
+48,Glasgow Coma Scale (GCS),15,points
+48,Urine output,62,mL/h
+48,Invasive mechanical ventilation,0,0/1
+48,High-flow nasal cannula (HFNC),0,0/1
+48,Non-invasive ventilation (NIV),0,0/1
+48,Tracheostomy,0,0/1
+48,Renal replacement therapy present,0,0/1
+48,Renal replacement therapy active,0,0/1
+48,Extracorporeal membrane oxygenation (ECMO),0,0/1
+48,Vasopressor use,0,0/1
+48,Norepinephrine-equivalent dose,0.0,µg/kg/min
+48,Norepinephrine infusion rate,0.0,µg/kg/min
+48,Epinephrine infusion rate,0,µg/kg/min
+48,Dopamine infusion rate,0,µg/kg/min
+48,Dobutamine infusion rate,0,µg/kg/min
+48,Vasopressin infusion rate,0,U/min
+48,Sedation exposure,0,0/1
+48,Number of active systemic antibacterials,1,count
+48,Number of active β-lactams,1,count
+48,Anti-MRSA coverage,0,0/1
+48,β-lactam Modified Antibiotic Spectrum Index (ASI),8,points
+48,Carbapenem exposure,0,0/1
+48,Additional anaerobic coverage,0,0/1
+48,Atypical pathogen coverage,0,0/1
+48,Aminoglycoside exposure,0,0/1
+48,Fluoroquinolone exposure,0,0/1
+48,Polymyxin exposure,0,0/1
+48,Antifungal exposure,0,0/1
+48,Antiviral exposure,0,0/1

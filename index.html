@@ -206,28 +206,29 @@
           <div class="upload-intro">
             <div class="step-label"><span class="n">2</span> Upload recent ICU measurements</div>
             <h4>Longitudinal timeline CSV</h4>
-            <p>Use one row per measurement. The three required columns are <code>rel_t0_hour</code>, <code>variable</code>, and <code>value</code>.</p>
+            <p>Use one row per measurement. The required columns are <code>time_from_t0_hours</code>, <code>measurement</code>, and <code>value</code>. Use the clinical measurement names in the downloadable template.</p>
           </div>
 
           <div class="upload-box" id="dropZone" tabindex="0">
             <svg><use href="#i-upload"/></svg>
             <b>Drop timeline CSV here or choose a file</b>
-            <span>Columns: <code>rel_t0_hour,variable,value</code></span>
-            <small>Include measurements available up to the selected decision time. Duplicate hour × variable rows are rejected.</small>
+            <span>Columns: <code>time_from_t0_hours,measurement,value</code></span>
+            <small>Use publication-ready clinical names from the template. The browser translates them internally to the frozen model variables before calculation.</small>
             <input type="file" id="timelineFile" accept=".csv,text/csv" hidden>
-            <button class="btn small ghost" type="button" id="chooseFile">Choose CSV</button>
+            <label class="btn small ghost" for="timelineFile" id="chooseFile" role="button">Choose CSV</label>
           </div>
           <div class="file-summary" id="fileSummary"><span>No timeline loaded</span><a href="templates/sahg_betadt_timeline_template.csv" download>Download template</a></div>
 
           <details class="tool-details">
             <summary>Which measurements can I include?</summary>
             <div class="details-body">
-              <p>The calculator accepts the following canonical longitudinal variables. You do not need a value for every variable at every hour; enter measurements that are actually available.</p>
+              <p>Use the clinical names below exactly as shown in the downloadable template. You do not need every measurement at every hour; enter only values actually available at that time.</p>
+              
               <div class="variable-groups">
-                <div class="variable-group"><b>Vital signs & oxygenation</b><span>heart_rate · systolic_bp · diastolic_bp · map · respiratory_rate · spo2 · temperature · fio2 · po2 · safi · pafi</span></div>
-                <div class="variable-group"><b>Laboratory measurements</b><span>lactate · creatinine · bun · sodium · potassium · chloride · bicarbonate · glucose · calcium · ionized_calcium · hemoglobin · hematocrit · platelet · wbc · neutrophil_pct · lymphocyte_pct · albumin · bilirubin · crp · inr_pt · pt · ptt</span></div>
-                <div class="variable-group"><b>Clinical state & organ support</b><span>sofa · sirs · news · news_partial · gcs · urine · invasive_ventilation · hfnc · niv · tracheostomy · rrt_present · rrt_active · ecmo_any · vaso_ind · norepi_equiv · norepi_rate · epi_rate · dopa_rate · dobu_rate · vasopressin_rate · sedation_ind</span></div>
-                <div class="variable-group"><b>Current anti-infective exposure</b><span>treatment_active_antibacterial_count · treatment_active_beta_lactam_count · treatment_anti_mrsa · treatment_beta_asi · treatment_carbapenem · treatment_anaerobic_addon · treatment_atypical_coverage · treatment_aminoglycoside · treatment_fluoroquinolone · treatment_polymyxin · treatment_antifungal · treatment_antiviral</span></div>
+                <div class="variable-group"><b>Vital signs &amp; oxygenation</b><span>Heart rate · Systolic blood pressure · Diastolic blood pressure · Mean arterial pressure · Respiratory rate · Peripheral oxygen saturation (SpO₂) · Body temperature · Fraction of inspired oxygen (FiO₂) · Arterial oxygen partial pressure (PaO₂) · SpO₂/FiO₂ ratio (S/F ratio) · PaO₂/FiO₂ ratio (P/F ratio)</span></div>
+                <div class="variable-group"><b>Laboratory measurements</b><span>Blood lactate · Serum creatinine · Blood urea nitrogen · Serum sodium · Serum potassium · Serum chloride · Serum bicarbonate · Blood glucose · Total serum calcium · Ionized calcium · Hemoglobin · Hematocrit · Platelet count · White blood cell count · Neutrophils · Lymphocytes · Serum albumin · Total bilirubin · C-reactive protein (CRP) · International normalized ratio (INR) · Prothrombin time (PT) · Partial thromboplastin time (PTT)</span></div>
+                <div class="variable-group"><b>Clinical state &amp; organ support</b><span>Sequential Organ Failure Assessment (SOFA) score · Systemic Inflammatory Response Syndrome (SIRS) score · National Early Warning Score (NEWS) · Partial NEWS indicator · Glasgow Coma Scale (GCS) · Urine output · Invasive mechanical ventilation · High-flow nasal cannula (HFNC) · Non-invasive ventilation (NIV) · Tracheostomy · Renal replacement therapy present · Renal replacement therapy active · Extracorporeal membrane oxygenation (ECMO) · Vasopressor use · Norepinephrine-equivalent dose · Norepinephrine infusion rate · Epinephrine infusion rate · Dopamine infusion rate · Dobutamine infusion rate · Vasopressin infusion rate · Sedation exposure</span></div>
+                <div class="variable-group"><b>Current anti-infective exposure</b><span>Number of active systemic antibacterials · Number of active β-lactams · Anti-MRSA coverage · β-lactam Modified Antibiotic Spectrum Index (ASI) · Carbapenem exposure · Additional anaerobic coverage · Atypical pathogen coverage · Aminoglycoside exposure · Fluoroquinolone exposure · Polymyxin exposure · Antifungal exposure · Antiviral exposure</span></div>
               </div>
             </div>
           </details>
@@ -335,9 +336,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.22.0/dist/ort.min.js"></script>
-<script>
-  document.getElementById('recentA5select').addEventListener('change',e=>document.getElementById('recentA5').checked=e.target.value==='1');
-</script>
 <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>

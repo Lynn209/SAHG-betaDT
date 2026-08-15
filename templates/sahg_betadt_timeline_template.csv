@@ -1,67 +1,67 @@
-rel_t0_hour,variable,value
--24,heart_rate,
--24,systolic_bp,
--24,diastolic_bp,
--24,map,
--24,respiratory_rate,
--24,spo2,
--24,temperature,
--24,fio2,
--24,po2,
--24,safi,
--24,pafi,
--24,lactate,
--24,creatinine,
--24,bun,
--24,sodium,
--24,potassium,
--24,chloride,
--24,bicarbonate,
--24,glucose,
--24,calcium,
--24,ionized_calcium,
--24,hemoglobin,
--24,hematocrit,
--24,platelet,
--24,wbc,
--24,neutrophil_pct,
--24,lymphocyte_pct,
--24,albumin,
--24,bilirubin,
--24,crp,
--24,inr_pt,
--24,pt,
--24,ptt,
--24,sofa,
--24,sirs,
--24,news,
--24,news_partial,
--24,gcs,
--24,urine,
--24,invasive_ventilation,
--24,hfnc,
--24,niv,
--24,tracheostomy,
--24,rrt_present,
--24,rrt_active,
--24,ecmo_any,
--24,vaso_ind,
--24,norepi_equiv,
--24,norepi_rate,
--24,epi_rate,
--24,dopa_rate,
--24,dobu_rate,
--24,vasopressin_rate,
--24,sedation_ind,
--24,treatment_active_antibacterial_count,
--24,treatment_active_beta_lactam_count,
--24,treatment_anti_mrsa,
--24,treatment_beta_asi,
--24,treatment_carbapenem,
--24,treatment_anaerobic_addon,
--24,treatment_atypical_coverage,
--24,treatment_aminoglycoside,
--24,treatment_fluoroquinolone,
--24,treatment_polymyxin,
--24,treatment_antifungal,
--24,treatment_antiviral,
+﻿time_from_t0_hours,measurement,value,unit_or_encoding
+0,Heart rate,,beats/min
+0,Systolic blood pressure,,mmHg
+0,Diastolic blood pressure,,mmHg
+0,Mean arterial pressure,,mmHg
+0,Respiratory rate,,breaths/min
+0,Peripheral oxygen saturation (SpO₂),,%
+0,Body temperature,,°C
+0,Fraction of inspired oxygen (FiO₂),,%
+0,Arterial oxygen partial pressure (PaO₂),,mmHg
+0,SpO₂/FiO₂ ratio (S/F ratio),,ratio
+0,PaO₂/FiO₂ ratio (P/F ratio),,ratio
+0,Blood lactate,,mmol/L
+0,Serum creatinine,,mg/dL
+0,Blood urea nitrogen,,mg/dL
+0,Serum sodium,,mmol/L
+0,Serum potassium,,mmol/L
+0,Serum chloride,,mmol/L
+0,Serum bicarbonate,,mmol/L
+0,Blood glucose,,mg/dL
+0,Total serum calcium,,mg/dL
+0,Ionized calcium,,mmol/L
+0,Hemoglobin,,g/dL
+0,Hematocrit,,%
+0,Platelet count,,×10⁹/L
+0,White blood cell count,,×10⁹/L
+0,Neutrophils,,%
+0,Lymphocytes,,%
+0,Serum albumin,,g/dL
+0,Total bilirubin,,mg/dL
+0,C-reactive protein (CRP),,mg/L
+0,International normalized ratio (INR),,ratio
+0,Prothrombin time (PT),,s
+0,Partial thromboplastin time (PTT),,s
+0,Sequential Organ Failure Assessment (SOFA) score,,points
+0,Systemic Inflammatory Response Syndrome (SIRS) score,,points
+0,National Early Warning Score (NEWS),,points
+0,Partial NEWS indicator,,0/1
+0,Glasgow Coma Scale (GCS),,points
+0,Urine output,,mL/h
+0,Invasive mechanical ventilation,,0/1
+0,High-flow nasal cannula (HFNC),,0/1
+0,Non-invasive ventilation (NIV),,0/1
+0,Tracheostomy,,0/1
+0,Renal replacement therapy present,,0/1
+0,Renal replacement therapy active,,0/1
+0,Extracorporeal membrane oxygenation (ECMO),,0/1
+0,Vasopressor use,,0/1
+0,Norepinephrine-equivalent dose,,µg/kg/min
+0,Norepinephrine infusion rate,,µg/kg/min
+0,Epinephrine infusion rate,,µg/kg/min
+0,Dopamine infusion rate,,µg/kg/min
+0,Dobutamine infusion rate,,µg/kg/min
+0,Vasopressin infusion rate,,U/min
+0,Sedation exposure,,0/1
+0,Number of active systemic antibacterials,,count
+0,Number of active β-lactams,,count
+0,Anti-MRSA coverage,,0/1
+0,β-lactam Modified Antibiotic Spectrum Index (ASI),,points
+0,Carbapenem exposure,,0/1
+0,Additional anaerobic coverage,,0/1
+0,Atypical pathogen coverage,,0/1
+0,Aminoglycoside exposure,,0/1
+0,Fluoroquinolone exposure,,0/1
+0,Polymyxin exposure,,0/1
+0,Antifungal exposure,,0/1
+0,Antiviral exposure,,0/1
