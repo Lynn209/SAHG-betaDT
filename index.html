@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SAHG-βDT | β-lactam Treatment Decision Tool</title>
+  <meta name="description" content="SAHG-βDT browser-based beta-lactam treatment decision tool">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Tool-only refinements. Existing friendly13 palette and card system are retained. */
+    .tool-hero{padding:54px 0 42px;background:linear-gradient(135deg,#faf8ff 0%,#f7fbff 48%,#f2fbf8 100%);border-bottom:1px solid var(--line)}
+    .tool-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+    .tool-hero h1{font-size:48px;line-height:1.05;letter-spacing:-.04em;margin:18px 0 14px;color:#253043}
+    .tool-hero h1 span{color:var(--f12)}
+    .tool-hero .lead{max-width:760px;margin-bottom:0}
+    .quick-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;box-shadow:var(--shadow)}
+    .quick-card h3{margin:0 0 16px;font-size:17px}
+    .quick-step{display:grid;grid-template-columns:34px 1fr;gap:11px;align-items:start;padding:11px 0;border-bottom:1px solid #edf1f5}
+    .quick-step:last-child{border-bottom:0;padding-bottom:0}
+    .quick-step:first-of-type{padding-top:0}
+    .quick-num{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:#eef5fb;color:var(--f12);font-size:12px;font-weight:900}
+    .quick-step:nth-of-type(2) .quick-num{background:#eaf8f5;color:var(--f4)}
+    .quick-step:nth-of-type(3) .quick-num{background:#fff4f7;color:var(--f1)}
+    .quick-step b{display:block;font-size:13px;margin:1px 0 2px}
+    .quick-step span{display:block;font-size:11px;color:var(--muted)}
+    .tool-section{padding:54px 0 78px}
+    .section-head.compact{margin-bottom:22px;align-items:center}
+    .section-head.compact h2{font-size:31px}
+    .section-head.compact p{max-width:650px}
+    .step-label{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:850;color:var(--f12);margin-bottom:12px}
+    .step-label .n{display:grid;place-items:center;width:23px;height:23px;border-radius:8px;background:#eef2ff;color:var(--f12);font-size:11px;letter-spacing:0}
+    .form-subtitle{margin:-6px 0 17px;color:var(--muted);font-size:12px}
+    .field-note{display:block;margin-top:5px;font-size:10px;font-weight:500;color:#8793a2;line-height:1.35}
+    .upload-intro{margin-top:24px;padding-top:21px;border-top:1px solid #edf1f5}
+    .upload-intro h4{margin:0 0 4px;font-size:16px}
+    .upload-intro p{margin:0;color:var(--muted);font-size:12px}
+    details.tool-details{margin-top:12px;border:1px solid var(--line);border-radius:12px;background:#fbfcfe;overflow:hidden}
+    details.tool-details>summary{cursor:pointer;list-style:none;padding:12px 14px;font-size:12px;font-weight:800;color:#566273;display:flex;align-items:center;justify-content:space-between}
+    details.tool-details>summary::-webkit-details-marker{display:none}
+    details.tool-details>summary:after{content:'+';font-size:18px;color:var(--f12);line-height:1}
+    details.tool-details[open]>summary:after{content:'–'}
+    .details-body{padding:0 14px 14px;border-top:1px solid #edf1f5}
+    .details-body p{font-size:11px;color:var(--muted);margin:11px 0}
+    .variable-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .variable-group{background:#fff;border:1px solid #e7edf3;border-radius:10px;padding:10px 11px}
+    .variable-group b{display:block;font-size:11px;margin-bottom:5px;color:#485568}
+    .variable-group span{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:9.5px;line-height:1.55;color:#778393;overflow-wrap:anywhere}
+    .advanced-grid{padding-top:12px}
+    .advanced-grid .form-grid{margin-top:0}
+    .advanced-grid .validation-panel{margin-bottom:0}
+    .primary-run{margin-top:18px}
+    .result-card{position:sticky;top:92px}
+    .result-guide{font-size:11px;color:var(--muted);margin:-7px 0 14px}
+    .result-card .empty-result{padding:76px 24px 82px}
+    .action-help{margin-top:16px}
+    .action-help .action-legend{grid-template-columns:repeat(2,1fr);margin-top:0;padding:0 14px 14px}
+    .action-help .action-legend article{min-height:92px;padding:12px}
+    .action-help .action-legend h4{font-size:12px;margin:6px 0 0}
+    .result-details{margin-top:14px}
+    .result-details .subhead{margin:0 0 8px}
+    .result-details .details-body{padding-top:12px}
+    .privacy-line{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:11px;color:#6c7886}
+    .privacy-line svg{width:16px;height:16px;stroke:var(--f4);fill:none;stroke-width:1.8}
+    .disclaimer-bar{background:#fff;border-top:1px solid var(--line);padding:16px 0}
+    .disclaimer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:11px;color:#75808d}
+    .disclaimer-inner b{color:#566273}
+
+    /* v2 UI fixes */
+    .quick-step .quick-num{
+      display:grid;
+      place-items:center;
+      width:30px;
+      height:30px;
+      padding:0;
+      line-height:1;
+      text-align:center;
+      box-sizing:border-box;
+    }
+    /* Preserve the lowercase Greek beta instead of uppercasing it to a glyph that resembles Latin B. */
+    .tool-hero .eyebrow{
+      text-transform:none;
+    }
+
+
+    /* v4: local CSV loading state + gated recommendation button */
+    .upload-progress{
+      margin:12px 3px 2px;
+      padding:12px 13px;
+      border:1px solid #e0e7ef;
+      border-radius:12px;
+      background:#fbfcfe;
+    }
+    .upload-progress.hidden{display:none!important}
+    .upload-progress-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:8px;
+      font-size:11px;
+      color:#667487;
+    }
+    .upload-progress-head b{color:#4f5d6e;font-size:11px}
+    .upload-progress-track{
+      height:8px;
+      overflow:hidden;
+      border-radius:999px;
+      background:#e9edf3;
+    }
+    .upload-progress-bar{
+      width:0%;
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--f3),var(--f4));
+      transition:width .18s ease;
+    }
+    .upload-progress.complete .upload-progress-bar{
+      background:linear-gradient(90deg,var(--f4),#37b8a3);
+    }
+    .uploaded-file-card{
+      display:none;
+      margin:10px 3px 2px;
+      padding:11px 12px;
+      border:1px solid #dbe7e4;
+      border-radius:12px;
+      background:#f5fbf9;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .uploaded-file-card.show{display:flex}
+    .uploaded-file-main{min-width:0}
+    .uploaded-file-name{
+      display:block;
+      font-size:12px;
+      font-weight:800;
+      color:#405164;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      max-width:420px;
+    }
+    .uploaded-file-meta{
+      display:block;
+      margin-top:2px;
+      color:#74818f;
+      font-size:10px;
+    }
+    .uploaded-file-actions{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex:none;
+    }
+    .uploaded-file-actions a{
+      color:var(--f12);
+      text-decoration:none;
+      font-size:11px;
+      font-weight:800;
+      border:1px solid #d6dbea;
+      background:#fff;
+      border-radius:9px;
+      padding:7px 10px;
+    }
+    .file-summary{align-items:center}
+    .file-summary .timeline-status{min-width:0}
+    .run-btn:disabled{
+      opacity:1!important;
+      background:#d9dee6!important;
+      color:#8e98a5!important;
+      box-shadow:none!important;
+      cursor:not-allowed!important;
+    }
+    .run-btn:disabled svg{stroke:#8e98a5!important}
+    .run-btn:not(:disabled){
+      transition:background .2s ease,box-shadow .2s ease,transform .15s ease;
+    }
+    .run-btn:not(:disabled):hover{transform:translateY(-1px)}
+    .ready-hint{
+      margin-top:8px;
+      min-height:16px;
+      font-size:10.5px;
+      color:#7d8996;
+      text-align:center;
+    }
+    .ready-hint.ready{color:#557b72;font-weight:700}
+
+
+    /* v5: runtime errors are visible instead of silently keeping the button disabled */
+    .form-message:not(:empty){
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:10px;
+      background:#fff3f6;
+      border:1px solid #ffd0dc;
+      color:#a53b58;
+      font-size:11px;
+      line-height:1.55;
+    }
+
+
+    /* v7: browser calculation progress */
+    .calc-progress{
+      margin-top:12px;
+      padding:12px 13px;
+      border:1px solid #e2e6ef;
+      border-radius:12px;
+      background:#fafbfe;
+    }
+    .calc-progress.hidden{display:none!important}
+    .calc-progress-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:8px;
+      font-size:11px;
+      color:#667487;
+    }
+    .calc-progress-head b{
+      color:#4d5a6b;
+      font-size:11px;
+    }
+    .calc-progress-track{
+      height:9px;
+      overflow:hidden;
+      border-radius:999px;
+      background:#e7eaf0;
+    }
+    .calc-progress-bar{
+      width:0%;
+      height:100%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--f5),var(--f4));
+      transition:width .22s ease;
+    }
+    .calc-progress.success .calc-progress-bar{
+      background:linear-gradient(90deg,var(--f4),#39bba5);
+    }
+    .calc-progress.error .calc-progress-bar{
+      background:var(--f1);
+    }
+
+    .hidden-contract-stats{display:none!important}
+    @media(max-width:980px){.tool-hero-grid{grid-template-columns:1fr}.result-card{position:static}.quick-card{max-width:none}}
+    @media(max-width:620px){.tool-hero{padding:38px 0 30px}.tool-hero h1{font-size:37px}.variable-groups{grid-template-columns:1fr}.disclaimer-inner{display:block}.action-help .action-legend{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true">
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.8 2.9 8.7 7 10 4.1-1.3 7-5.2 7-10V6l-7-3Z"/><path d="m9.2 12 1.8 1.8 4-4"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m0 0-4 4m4-4 4 4M5 14v5h14v-5"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 3 5 3 3 0 0 0 5 2V5A3 3 0 0 0 9 4Zm6 0a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-3 5 3 3 0 0 1-5 2V5a3 3 0 0 1 3-1Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 9v4m0 3h.01"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="brand-mark">β</span><span>SAHG-βDT</span></a>
+    <nav>
+      <a href="#calculator">Calculator</a>
+      <a href="templates/sahg_betadt_timeline_template.csv" download>CSV template</a>
+      <a href="INPUT_GUIDE.md">Input guide</a>
+    </nav>
+    <div class="api-pill ready"><span class="dot"></span><span>Local processing</span></div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="tool-hero">
+    <div class="wrap tool-hero-grid">
+      <div>
+        <div class="eyebrow"><svg><use href="#i-shield"/></svg> β-lactam treatment decision tool</div>
+        <h1>SAHG-βDT<br><span>Patient-level policy calculator</span></h1>
+        <p class="lead">Enter the patient's current treatment context and upload recent ICU measurements to obtain a policy recommendation for the selected decision time.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#calculator">Start assessment</a>
+          <a class="btn ghost" href="templates/sahg_betadt_timeline_template.csv" download>Download CSV template</a>
+        </div>
+        <div class="privacy-line"><svg><use href="#i-shield"/></svg><span>Calculation runs in this browser. Do not enter direct patient identifiers.</span></div>
+      </div>
+      <div class="quick-card">
+        <h3>What you need</h3>
+        <div class="quick-step"><span class="quick-num">1</span><div><b>Current patient information</b><span>Decision time, demographics and current antibacterial regimen.</span></div></div>
+        <div class="quick-step"><span class="quick-num">2</span><div><b>Recent ICU timeline</b><span>Upload a CSV containing available longitudinal measurements up to the decision time.</span></div></div>
+        <div class="quick-step"><span class="quick-num">3</span><div><b>Policy recommendation</b><span>Receive A0–A5 or abstention, with estimated 72-h outcome risk and support checks.</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-section" id="calculator">
+    <div class="wrap">
+      <div class="section-head compact">
+        <div>
+          <div class="kicker">PATIENT ASSESSMENT</div>
+          <h2>Enter patient data</h2>
+          <p>Complete the fields below, upload the timeline CSV, then select <b>Get recommendation</b>.</p>
+        </div>
+        <div class="status-card ready" id="runtimeStatus">
+          <svg><use href="#i-check"/></svg>
+          <div><b>Calculator status</b><span id="runtimeStatusText">Checking calculator…</span><small id="selfTestInfo">Model check runs automatically before the first calculation.</small></div>
+        </div>
+      </div>
+
+      <!-- Kept for runtime compatibility; not shown to users. -->
+      <div class="hidden-contract-stats" aria-hidden="true">
+        <span id="statPatients"></span><span id="statDecisions"></span><span id="statAbstain"></span><span id="statESS"></span>
+      </div>
+
+      <div class="explorer-grid">
+        <form class="input-card" id="policyForm">
+          <div class="card-title">
+            <span class="icon-bubble c3"><svg><use href="#i-pulse"/></svg></span>
+            <div><h3>Patient input</h3><p>Clinical values used for this decision point</p></div>
+          </div>
+
+          <div class="step-label"><span class="n">1</span> Current patient information</div>
+          <p class="form-subtitle">Use the values available at the selected assessment time.</p>
+
+          <div class="form-grid">
+            <label>Decision time after antibiotic start
+              <select id="decisionHour"><option selected>24</option><option>48</option><option>72</option><option>96</option><option>120</option><option>144</option><option>168</option></select>
+              <span class="field-note">hours after t0</span>
+            </label>
+            <label>Sex
+              <select id="sex"><option value="male">Male</option><option value="female">Female</option><option value="unknown">Unknown</option></select>
+            </label>
+            <label>Age
+              <input id="age" type="number" min="18" max="110" step="1" placeholder="e.g., 65" required>
+              <span class="field-note">years</span>
+            </label>
+            <label>Weight
+              <input id="weight" type="number" min="20" max="300" step="0.1" placeholder="e.g., 70" required>
+              <span class="field-note">kg</span>
+            </label>
+            <label>Current β-lactam Modified ASI
+              <input id="betaAsi" type="number" min="0" max="15" step="0.1" placeholder="e.g., 8" required>
+            </label>
+            <label>Active antibacterials
+              <input id="abxCount" type="number" min="0" max="10" step="1" placeholder="e.g., 1" required>
+              <span class="field-note">number currently active</span>
+            </label>
+            <label>Active β-lactams
+              <input id="betaCount" type="number" min="0" max="5" step="1" placeholder="e.g., 1" required>
+              <span class="field-note">number currently active</span>
+            </label>
+            <label>Anti-MRSA coverage
+              <select id="antiMrsa"><option value="1">Present</option><option value="0" selected>Absent</option></select>
+            </label>
+            <label>Carbapenem active
+              <select id="carbapenem"><option value="1">Yes</option><option value="0" selected>No</option></select>
+            </label>
+            <label>Rescue / escalation-or-other in prior 24 h
+              <select id="recentA5select"><option value="0" selected>No</option><option value="1">Yes</option></select>
+              <span class="field-note">select Yes if factual A5 occurred in the previous 24 h</span>
+            </label>
+          </div>
+          <input id="recentA5" type="checkbox" hidden>
+
+          <div class="upload-intro">
+            <div class="step-label"><span class="n">2</span> Upload recent ICU measurements</div>
+            <h4>Longitudinal timeline CSV</h4>
+            <p>Use one row per measurement. The required columns are <code>time_from_t0_hours</code>, <code>measurement</code>, and <code>value</code>. Use the clinical measurement names in the downloadable template.</p>
+          </div>
+
+          <div class="upload-box" id="dropZone" tabindex="0">
+            <svg><use href="#i-upload"/></svg>
+            <b>Drop timeline CSV here or choose a file</b>
+            <span>Columns: <code>time_from_t0_hours,measurement,value</code></span>
+            <small>Use publication-ready clinical names from the template. The browser translates them internally to the frozen model variables before calculation.</small>
+            <input type="file" id="timelineFile" accept=".csv,text/csv" hidden>
+            <label class="btn small ghost" for="timelineFile" id="chooseFile" role="button">Choose CSV</label>
+          </div>
+          
+          <div class="upload-progress hidden" id="uploadProgress">
+            <div class="upload-progress-head">
+              <b id="uploadProgressLabel">Loading CSV locally…</b>
+              <span id="uploadProgressPct">0%</span>
+            </div>
+            <div class="upload-progress-track"><div class="upload-progress-bar" id="uploadProgressBar"></div></div>
+          </div>
+
+          <div class="uploaded-file-card" id="uploadedFileCard">
+            <div class="uploaded-file-main">
+              <span class="uploaded-file-name" id="uploadedFileName">—</span>
+              <span class="uploaded-file-meta" id="uploadedFileMeta">—</span>
+            </div>
+            <div class="uploaded-file-actions">
+              <a id="uploadedFileDownload" href="#" download>Download uploaded CSV</a>
+            </div>
+          </div>
+
+          <div class="file-summary" id="fileSummary">
+            <span class="timeline-status">No timeline loaded</span>
+            <a href="templates/sahg_betadt_timeline_template.csv" download>Download template</a>
+          </div>
+
+          <details class="tool-details">
+            <summary>Which measurements can I include?</summary>
+            <div class="details-body">
+              <p>Use the clinical names below exactly as shown in the downloadable template. You do not need every measurement at every hour; enter only values actually available at that time.</p>
+              
+              <div class="variable-groups">
+                <div class="variable-group"><b>Vital signs &amp; oxygenation</b><span>Heart rate · Systolic blood pressure · Diastolic blood pressure · Mean arterial pressure · Respiratory rate · Peripheral oxygen saturation (SpO₂) · Body temperature · Fraction of inspired oxygen (FiO₂) · Arterial oxygen partial pressure (PaO₂) · SpO₂/FiO₂ ratio (S/F ratio) · PaO₂/FiO₂ ratio (P/F ratio)</span></div>
+                <div class="variable-group"><b>Laboratory measurements</b><span>Blood lactate · Serum creatinine · Blood urea nitrogen · Serum sodium · Serum potassium · Serum chloride · Serum bicarbonate · Blood glucose · Total serum calcium · Ionized calcium · Hemoglobin · Hematocrit · Platelet count · White blood cell count · Neutrophils · Lymphocytes · Serum albumin · Total bilirubin · C-reactive protein (CRP) · International normalized ratio (INR) · Prothrombin time (PT) · Partial thromboplastin time (PTT)</span></div>
+                <div class="variable-group"><b>Clinical state &amp; organ support</b><span>Sequential Organ Failure Assessment (SOFA) score · Systemic Inflammatory Response Syndrome (SIRS) score · National Early Warning Score (NEWS) · Partial NEWS indicator · Glasgow Coma Scale (GCS) · Urine output · Invasive mechanical ventilation · High-flow nasal cannula (HFNC) · Non-invasive ventilation (NIV) · Tracheostomy · Renal replacement therapy present · Renal replacement therapy active · Extracorporeal membrane oxygenation (ECMO) · Vasopressor use · Norepinephrine-equivalent dose · Norepinephrine infusion rate · Epinephrine infusion rate · Dopamine infusion rate · Dobutamine infusion rate · Vasopressin infusion rate · Sedation exposure</span></div>
+                <div class="variable-group"><b>Current anti-infective exposure</b><span>Number of active systemic antibacterials · Number of active β-lactams · Anti-MRSA coverage · β-lactam Modified Antibiotic Spectrum Index (ASI) · Carbapenem exposure · Additional anaerobic coverage · Atypical pathogen coverage · Aminoglycoside exposure · Fluoroquinolone exposure · Polymyxin exposure · Antifungal exposure · Antiviral exposure</span></div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Runtime-only frozen defaults.
+               Intentionally hidden from ordinary users; app.js still requires these DOM IDs. -->
+          <div class="hidden-contract-stats" aria-hidden="true">
+            <select id="mode" tabindex="-1">
+              <option value="dynamic">Dynamic sequential</option>
+              <option value="independent" selected>Independent landmark only</option>
+            </select>
+            <select id="sourceProfile" tabindex="-1">
+              <option value="miiv" selected>MIMIC-IV preset</option>
+              <option value="eicu">eICU preset</option>
+              <option value="aumc">AmsterdamUMCdb preset</option>
+              <option value="hirid">HiRID preset</option>
+              <option value="sic">SICdb preset</option>
+              <option value="nwicu">NWICU preset</option>
+            </select>
+            <input id="patientCode" type="text" value="WEB-001" tabindex="-1">
+            <span id="pathState">stage=0 · cooldown=0 · pending=0 · last=none</span>
+            <button id="resetPath" type="button" tabindex="-1">Reset sequential state</button>
+          </div>
+
+          <div class="primary-run">
+            <button class="run-btn" id="runBtn" type="submit" disabled><svg><use href="#i-brain"/></svg><span>Get SAHG-βDT recommendation</span></button>
+            <div class="ready-hint" id="readyHint">Complete all required fields and upload a valid CSV to enable the recommendation.</div>
+
+            <div class="calc-progress hidden" id="calcProgress" aria-live="polite">
+              <div class="calc-progress-head">
+                <b id="calcProgressLabel">Preparing calculation…</b>
+                <span><span id="calcProgressPct">0%</span> · <span id="calcElapsed">0 s</span></span>
+              </div>
+              <div class="calc-progress-track">
+                <div class="calc-progress-bar" id="calcProgressBar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="form-message" id="formMessage"></div>
+        </form>
+
+        <div class="result-card">
+          <div class="card-title">
+            <span class="icon-bubble c4"><svg><use href="#i-shield"/></svg></span>
+            <div><h3>Recommendation</h3><p>Patient-level policy output</p></div>
+          </div>
+          <p class="result-guide">The calculator may recommend one of six actions or abstain when support is insufficient.</p>
+
+          <div class="empty-result" id="emptyResult">
+            <div class="empty-icon">β</div>
+            <h4>Your recommendation will appear here</h4>
+            <p>Complete the patient information, upload the timeline CSV and select <b>Get SAHG-βDT recommendation</b>.</p>
+          </div>
+
+          <div class="policy-result hidden" id="policyResult">
+            <div class="recommendation" id="recommendationBox">
+              <div class="rec-top"><span id="recCode">A0</span><span id="recConfidence">—</span></div>
+              <h4 id="recLabel">—</h4>
+              <p id="recReason">—</p>
+            </div>
+
+            <div class="evidence-badges">
+              <span id="badgeOOD">OOD —</span>
+              <span id="badgeAbstain">Abstain —</span>
+              <span id="badgeTransition">Transition —</span>
+            </div>
+
+            <details class="tool-details result-details" open>
+              <summary>Compare candidate actions</summary>
+              <div class="details-body">
+                <h4 class="subhead">Estimated 72-h broad-failure risk</h4>
+                <div class="action-table" id="actionTable"></div>
+              </div>
+            </details>
+
+            <details class="tool-details result-details">
+              <summary>Technical support details</summary>
+              <div class="details-body">
+                <h4 class="subhead">Selected-action diagnostics</h4>
+                <div class="diag-grid" id="diagGrid"></div>
+                <div class="runtime-foot" id="runtimeFoot"></div>
+              </div>
+            </details>
+          </div>
+
+          <details class="tool-details action-help">
+            <summary>What do A0–A5 and abstention mean?</summary>
+            <div class="action-legend">
+              <article class="a0"><div class="action-code">A0</div><h4>Continue current regimen</h4></article>
+              <article class="a1"><div class="action-code">A1</div><h4>Remove companion coverage</h4></article>
+              <article class="a2"><div class="action-code">A2</div><h4>β-lactam de-escalation</h4></article>
+              <article class="a3"><div class="action-code">A3</div><h4>Discontinue β-lactam</h4></article>
+              <article class="a4"><div class="action-code">A4</div><h4>Discontinue all antibacterials</h4></article>
+              <article class="a5"><div class="action-code">A5</div><h4>Rescue / escalation-or-other</h4></article>
+              <article class="abs"><div class="action-code">Ø</div><h4>Abstain — no supported policy recommendation</h4></article>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="disclaimer-bar">
+  <div class="wrap disclaimer-inner">
+    <span><b>Research use only.</b> This tool is not a substitute for clinician judgment and should not be used as autonomous clinical decision support.</span>
+    <span>Patient inputs are processed locally in the browser.</span>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div><b>SAHG-βDT</b><span>β-lactam treatment decision tool</span></div>
+    <div><span><a href="INPUT_GUIDE.md" style="color:#d8e0ea">Input guide</a> · <a href="templates/sahg_betadt_timeline_template.csv" style="color:#d8e0ea" download>CSV template</a></span></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.22.0/dist/ort.min.js"></script>
+<script type="module" src="assets/js/app.js?v=9.1"></script>
+</body>
+</html>
