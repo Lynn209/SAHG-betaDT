@@ -302,14 +302,13 @@
           <h2>Enter patient data</h2>
           <p>Complete the fields below, upload the timeline CSV, then select <b>Get recommendation</b>.</p>
         </div>
-        <div class="status-card ready" id="runtimeStatus">
-          <svg><use href="#i-check"/></svg>
-          <div><b>Calculator status</b><span id="runtimeStatusText">Checking calculator…</span><small id="selfTestInfo">Model check runs automatically before the first calculation.</small></div>
-        </div>
       </div>
 
       <!-- Kept for runtime compatibility; not shown to users. -->
       <div class="hidden-contract-stats" aria-hidden="true">
+        <span id="runtimeStatus"></span>
+        <span id="runtimeStatusText"></span>
+        <span id="selfTestInfo"></span>
         <span id="statPatients"></span><span id="statDecisions"></span><span id="statAbstain"></span><span id="statESS"></span>
       </div>
 
